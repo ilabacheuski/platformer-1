@@ -1,11 +1,11 @@
 import pygame
 from constants import *
-from settings import path_to_player
+from settings import player_image
 
 class Player(pygame.sprite.Sprite):
     def __init__(self):
-        pygame.sprite.Sprite._init_(self)
-        self.image = pygame.image.load(path_to_player).convert()
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.image.load(player_image).convert()
         self.rect = self.image.get_rect()
         self.rect.center = (WIDTH / 2, HEIGHT / 2)
 
