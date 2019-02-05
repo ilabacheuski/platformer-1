@@ -6,10 +6,9 @@ pygame.init() # Инициализация pygame
 screen = pygame.display.set_mode((WIDTH, HEIGHT)) # Создаем окно для отрисовки
 pygame.display.set_caption(TITLE) # Устанавливает заголовок окна
 
-all_sprites = pygame.sprite.Group()
+all_sprites = pygame.sprite.Group() # создаёт группу для спрайтов
 player = Player()
 all_sprites.add(player)
-
 
 running = True
 # Игровой цикл
@@ -38,4 +37,3 @@ while running:
     pygame.display.flip() # Отображаем нарисованое в Double buffer
 
 pygame.quit()
-
