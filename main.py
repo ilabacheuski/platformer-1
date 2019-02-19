@@ -13,6 +13,7 @@ all_sprites.add(player)
 running = True
 # Игровой цикл
 while running:
+    
     # events()
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
