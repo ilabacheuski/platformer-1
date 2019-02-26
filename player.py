@@ -6,7 +6,7 @@ class Player(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
         surface = pygame.image.load(player_image).convert_alpha()
-        scale_coefficient = PLAYER_WIDTH / surface.get_rect().width
+        scale_coefficient = ENEMY_WIDTH / surface.get_rect().width
         scaled_surface = pygame.transform.rotozoom(surface, 180, scale_coefficient)
         self.image = pygame.transform.rotate(scaled_surface, 180)
         self.rect = self.image.get_rect()

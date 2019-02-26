@@ -1,19 +1,23 @@
 import pygame
 from constants import *
-from player import Player   
+from player import Player
+from enemy import Enemy  
 
 pygame.init() # Инициализация pygame
 screen = pygame.display.set_mode((WIDTH, HEIGHT)) # Создаем окно для отрисовки
 pygame.display.set_caption(TITLE) # Устанавливает заголовок окна
+clock = pygame.time.Clock()
 
 all_sprites = pygame.sprite.Group() # создаёт группу для спрайтов
 player = Player()
+enemy = Enemy()
 all_sprites.add(player)
+all_sprites.add(enemy)
 
 running = True
 # Игровой цикл
 while running:
-    
+    clock.tick(FPS)
     # events()
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
