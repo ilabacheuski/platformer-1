@@ -2,6 +2,7 @@ import pygame
 from constants import *
 from player import Player
 from enemy import Enemy  
+from bullet import Bullet
 
 pygame.init() # Инициализация pygame
 screen = pygame.display.set_mode((WIDTH, HEIGHT)) # Создаем окно для отрисовки
@@ -11,8 +12,10 @@ clock = pygame.time.Clock()
 all_sprites = pygame.sprite.Group() # создаёт группу для спрайтов
 player = Player()
 enemy = Enemy()
+bullet = Bullet()
 all_sprites.add(player)
 all_sprites.add(enemy)
+all_sprites.add(bullet)
 
 running = True
 # Игровой цикл
