@@ -8,3 +8,5 @@ player_image = os.path.join(image_folder, 'player.png')
 enemy_image = os.path.join(image_folder, 'enemy.png')
 
 bullet_image = os.path.join(image_folder, 'bullet.png')
+
+level1_image = os.path.join(image_folder, 'level1.jpg')

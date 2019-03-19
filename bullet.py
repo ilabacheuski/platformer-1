@@ -33,4 +33,3 @@ class Bullet(pygame.sprite.Sprite):
 
         if (self.rect.midbottom[1] <= 0):
             self.kill()
-        
