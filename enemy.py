@@ -20,7 +20,6 @@ class Enemy(pygame.sprite.Sprite):
         self.speedy = 4
         self.traverse_limit = 0
         self.set_traverse_limit()
-        print("x: {0}".format(self.rect.x))
     
     def set_traverse_limit(self):
         self.direction *= -1
@@ -30,7 +29,6 @@ class Enemy(pygame.sprite.Sprite):
         if (self.rect.x >= WIDTH - distance):
             self.direction = -1
         self.traverse_limit = self.rect.x + self.direction * distance
-        print("traverse_limit {0}, direction {1}".format(self.traverse_limit, self.direction))
     
     def update(self):
         self.rect.y += self.speedy
